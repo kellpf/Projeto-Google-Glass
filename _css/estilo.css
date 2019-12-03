@@ -1,0 +1,230 @@
+@charset "UTF8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap'); /* fonte do google */
+@font-face {
+    font-family: 'FonteLogo';
+    src: url(../_fonts/bubblegum-sans-regular.otf);
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dddddd;   /* hsl e hsla sao diferentes, o a adiciona transparencia */
+    color: rgb(26, 26, 27); /* rgb e rgba sao diferentes, o a adiciona transparencia  */
+}
+
+div#interface {
+    width: 1200px;
+    background-color: #ffffff;
+    margin:-10px auto 10px auto; /* margem da esquerda e direita automatica */
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5);
+    padding: 10px 10px 10px 10px; 
+}
+p{
+    text-align: justify;
+    text-indent: 50px;
+}
+
+a {
+    color: #606060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header#cabecalho img#icone {
+    position: absolute;
+    top: 80px;
+    left: 1050px;  /*left = esquerda*/
+}
+header#cabecalho {
+    border-bottom: 1px #606060 solid;
+    height: 150px;
+    background: url(../_imagens/glass-logo-peq.jpg) no-repeat 0px 80px; 
+}
+header#cabecalho h1 {
+    font-family: 'FonteLogo', Helvetica, sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+    padding: 0px;
+    margin-bottom: 0px;  /* margem de baixo do a1 */
+}
+header#cabecalho h2 {
+    font-family: 'Titillium Web', sans-serif;
+    color: #888888;
+    font-size: 15pt;   /* tamanho da fonte */
+    padding: 0px;
+    margin-top: 0px;
+}
+/*Formatação de imagens com legenda*/
+
+figure.foto-legenda {
+    position: relative;
+    border: 8px solid white;
+    box-shadow: 1px 1px 4px black;  /* sombra */
+}
+figure.foto-legenda img {
+    width: 100%;
+    height: 100%;
+}
+figure.foto-legenda figcaption {
+    opacity: 0;  /* fazer legenda sumiur */
+    position: absolute; /* posição absoluta */
+    top: 0px;
+    background-color: rgba(0, 0, 0, .4);  /* (0.4) -> camada transparente no fundo da legenda */
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 1s;
+}
+figure.foto-legenda:hover figcaption {  /* formatação quando passar o mouse por cima do figcaption */
+    opacity: 1;  
+}
+
+/*Formatação do Menu*/
+
+nav#menu {
+    display: block; /*para ser exibido como um bloco*/
+}
+
+nav#menu ul { /*#menu para ID MENU*/
+    list-style: none; /*para sumir com os marcadores da lista ul*/
+    text-transform: uppercase; /*todas as letras ficam em letra maiuscula*/
+    position: absolute;
+    top: -20px;
+    left: 600px;
+}
+nav#menu li {
+    display: inline-block; /*colocar os itens da lista (li) em uma unica linha */
+    background-color: #dddddd;
+    padding: 10px; /*criar espaço entre as opções dentro do menu*/
+    margin: 2px; /* margin -> espaço entre as opções fora do menu / margin != padding*/
+    transition: background-color 1s;  /* transição */
+}
+
+nav#menu li:hover {  /* quando passa o mouse por cima */
+    background-color: #606060;
+}
+
+nav#menu h1 {
+    display: none;
+}
+
+nav#menu a {
+    color: #000000;
+    text-decoration: none; /* tirar sublinhado */
+}
+
+nav#menu a:hover {   /* hover = flutuar */
+    color: #ffffff;
+    text-decoration: underline;
+}
+section#corpo {
+    display: block;
+    width: 700px;
+    float: left; /* flutuar lado esquerdo */
+    border-right: 1px solid #606060;
+    padding-right: 40px;
+}
+
+article#noticia-principal h2 {
+    font-size: 13pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.direita {
+    text-align: right;
+}
+header#cabecalho-artigo h2 {
+    font-size: 13pt;
+    color: #cecece;
+    background-color: #ffffff;
+    margin: 0px;
+}
+header#cabecalho-artigo h3 {
+    font-size: 12px;
+    color: #606060;
+
+}
+table#tablespec {      /* borda da tabela */
+    border: 1px solid #606060;
+    border-spacing: 0px;  /* espaço entre as cedulas */
+    margin-left: auto; /* centralizar tabela */
+    margin-right: auto; /* centralizar tabela */
+}
+table#tablespec td { /* borda interna da tabela */
+    border: 1px solid #606060;
+    padding: 10px; 
+    text-align: center;
+    vertical-align: middle;
+}
+table#tablespec td.ce {  /* td.ce    para identificar a classe */
+    color: #ffffff;  /* cor da fonte */
+    background-color:#606060; /* cor de fundo */
+    vertical-align: top;
+    font-weight: bold;   /* negrito */
+}
+table#tablespec td.cd {
+    background-color: #cecece;
+}
+
+table#tablespec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+table#tablespec caption span {
+    display: block; /* bloco flutuante */
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+aside#lateral {
+    display: block;
+    width: 400px;
+    float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 8px;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+}
+aside#lateral h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-top: 0px;
+}
+aside#lateral h2 {
+    background-color: #606060;
+    font-size: 13pt;
+    color: #ffffff;
+}
+footer#rodape {
+    clear: both; /* limpar as configurações dos dois lados (left e right) */
+    border-top: 1px solid #606060;
+}
+footer#rodape p {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
